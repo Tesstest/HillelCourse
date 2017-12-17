@@ -1,6 +1,5 @@
 package com.company;
 
-import javax.jws.soap.SOAPBinding;
 import java.util.Scanner;
 
 public class Lesson3 {
