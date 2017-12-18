@@ -6,10 +6,11 @@ import java.util.Scanner;
 public class Lesson4 {
 
     public static void main(String[] args) {
-        //findMin();
-        //sortArray();
-        //palindrom();
+        findMin();
+        sortArray();
+        palindrom();
         reversString();
+        fibonacci();
     }
 
     public static void findMin() {
@@ -91,5 +92,34 @@ public class Lesson4 {
         }
         revers = new String(chars);
         System.out.println(revers);
+    }
+
+    public static void fibonacci(){
+        int a = 0;
+        int b = 1;
+        int c = 1;
+        int b1 = -1;
+        System.out.println("Enter max number:");
+        Scanner scan = new Scanner(System.in);
+        while (!scan.hasNextInt()){
+            System.out.println("Try again! Enter integer number:");
+            scan.next();
+        }
+        int max = scan.nextInt();
+        if (max >= 0) {
+            while ((a+b) < max){
+                c = a + b;
+                a = b;
+                b = c;
+                System.out.print(" " + c);
+            }
+        } else {
+            while (c >= max) {
+                c = a + b1;
+                a = b1;
+                b1 = c;
+                System.out.print(" " + c);
+            }
+        }
     }
 }
