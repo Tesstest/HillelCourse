@@ -6,9 +6,10 @@ import java.util.Scanner;
 public class Lesson4 {
 
     public static void main(String[] args) {
-        findMin();
-        sortArray();
-        palindrom();
+        //findMin();
+        //sortArray();
+        //palindrom();
+        reversString();
     }
 
     public static void findMin() {
@@ -71,5 +72,24 @@ public class Lesson4 {
         } else {
             System.out.println("It is not palindrom!");
         }
+    }
+
+    public static void reversString() {
+        //Task 7. Revers string
+        String text;
+        String revers;
+        char temp;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a string:");
+
+        text = scan.nextLine();
+        char[] chars = text.toCharArray();
+        for (int i=0; i < chars.length/2; i++ ){
+            temp = chars[i];
+            chars[i] = chars[chars.length - 1- i];
+            chars[chars.length - 1- i] = temp;
+        }
+        revers = new String(chars);
+        System.out.println(revers);
     }
 }
