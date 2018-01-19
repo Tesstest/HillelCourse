@@ -6,11 +6,49 @@ import java.util.Scanner;
 public class Lesson4 {
 
     public static void main(String[] args) {
-        findMin();
-        sortArray();
-        palindrom();
-        reversString();
-        fibonacci();
+        drowing1();
+        drowing2();
+        //findMin();
+        //sortArray();
+        //palindrom();
+        //reversString();
+        //fibonacci();
+    }
+
+    public static void drowing1() {
+        for (int i = 1; i <= 8; i++){
+            int j = 1;
+            while (j <= i){
+                System.out.print("#");
+                j++;
+            }
+            System.out.println();
+        }
+    }
+
+    public static void drowing2() {
+
+        int j;
+        for (int i = 8; i > 0; i--){
+            j = i;
+            while (j > 0){
+                System.out.print("#");
+                j--;
+            }
+            System.out.println();
+        }
+    }
+    public static void drowing3() {
+
+        int j;
+        for (int i = 8; i > 0; i--){
+            j = i;
+            while (j > 0){
+                System.out.print("#");
+                j--;
+            }
+            System.out.println();
+        }
     }
 
     public static void findMin() {
